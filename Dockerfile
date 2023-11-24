@@ -1,7 +1,9 @@
 FROM node:alpine AS base
 WORKDIR /app
 RUN npm install -g @moonrepo/cli
-
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
 # # #
 FROM base AS workspace
