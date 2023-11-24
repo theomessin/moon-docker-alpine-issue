@@ -1,0 +1,3 @@
+tasks:
+  dev:
+    command: "ts-node index.ts"
